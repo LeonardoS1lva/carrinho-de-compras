@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrinho de Compras</title>
+
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-stone-200 flex flex-col">
+
+  <section id="carrinho"
+    class="fixed top-0 right-[-360px] bg-slate-950 h-screen w-[360px] text-slate-200 z-50 duration-200 border-l border-slate-200 p-5 flex flex-col justify-between">
+    <div id="cabecalho-carrinho" class="flex justify-between m-4">
+      <p>Meu Carrinho</p>
+      <button id="fechar-carrinho" class="text-xl"><i class="fa-solid fa-circle-xmark"></i></button>
+    </div>
+    <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-2"></section>
+    <p id="preco-total" class="bg-slate-200 text-green-800 rounded-sm pl-5">Total: $0</p>
+    <button id="finalizar-compra" class="bg-slate-200 text-slate-900 p-1 hover:text-slate-200 hover:bg-slate-900">
+      Finalizar Compra
+    </button>
+  </section>
+
+  <header class="flex text-xl bg-slate-950 px-8 py-4 justify-between sticky top-0 shadow-slate-400 shadow-xl z-10">
+    <a href="./">
+      <img class="h-16" src="./assets/logo/hashtag.svg" alt="Logo Hashtag">
+    </a>
+    <div class="text-slate-200 flex gap-2 items-end mx-2">
+      <button id="abrir-carrinho" class="mx-2"><i class="fa-solid fa-cart-shopping"></i></button>
+      <a href="./pedidos.html">
+        <button class="mr-2"><i class="fa-solid fa-user"></i></button>
+      </a>
+    </div>
+  </header>
+
+  <main class="flex flex-col items-center">
+    <section id="filtros" class="p-10 flex">
+      <div class="px-2">
+        <input id="exibir-todos" type="radio" name="filtro" class="peer hidden" checked>
+        <label for="exibir-todos"
+          class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">
+          Todos
+        </label>
+      </div>
+      <div class="px-2">
+        <input id="exibir-masculinos" type="radio" name="filtro" class="peer hidden">
+        <label for="exibir-masculinos"
+          class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">
+          Masculinos
+        </label>
+      </div>
+      <div class="px-2">
+        <input id="exibir-femininos" type="radio" name="filtro" class="peer hidden">
+        <label for="exibir-femininos"
+          class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">
+          Femininos
+        </label>
+      </div>
+    </section>
+    <section id="container-produto" class="flex flex-wrap justify-center p-10 gap-10"></section>
+  </main>
+
+  <script src="./src/js/main.js" type="module"></script>
+</body>
+
+</html>
