@@ -19,8 +19,8 @@
             <img class="h-12" src="./assets/logo/hashtag.svg" alt="Logo Hashtag">
         </a>
     </header>
-    <form class="flex w-full px-5 py-10 gap-4 grow">
-        <section id="dados-usuario" class="w-1/3 bg-white rounded-lg py-5">
+    <form class="flex flex-col w-full px-5 py-10 gap-4 grow lg:flex-row">
+        <section id="dados-usuario" class="lg:w-1/3 w-full bg-white rounded-lg py-5">
             <p class="mb-5 text-center font-bold">Seus Dados</p>
             <div class="flex flex-col px-10 py-3">
                 <label for="nome" class="font-bold text-sm mb-2">Nome</label>
@@ -38,7 +38,7 @@
                     placeholder="(00)999999999" required>
             </div>
         </section>
-        <section id="pagamento-entrega" class="w-1/3 bg-white rounded-lg py-5">
+        <section id="pagamento-entrega" class="lg:w-1/3 w-full bg-white rounded-lg py-5">
             <p class="mb-5 text-center font-bold">Pagamento e Entrega</p>
             <div class="flex flex-col px-10 py-3">
                 <label for="numero-cartao" class="font-bold text-sm mb-2">Numero do Cartão</label>
@@ -80,7 +80,7 @@
                 </div>
             </div>
         </section>
-        <section id="produtos-checkout" class="w-1/3 bg-white rounded-lg py-5">
+        <section id="produtos-checkout" class="lg:w-1/3 w-full bg-white rounded-lg py-5">
             <section id="container-produto-checkout" class="h-4/5 overflow-y-auto px-2 flex flex-col items-center"></section>
             <section id="celula-checkout" class="flex flex-col h-1/5 px-2 justify-around rounded-lg">
                 <p id="preco-total" class="bg-slate-200 text-green-800 rounded-sm pl-5">Total: $0</p>
